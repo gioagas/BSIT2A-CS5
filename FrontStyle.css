@@ -1,0 +1,188 @@
+@import url('../CSS/Fonts.css');
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+svg {
+    display: block;
+    font: 10rem 'Secular';
+    width: 960px;
+    height: 300px;
+    margin: auto ;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: turquoise;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: gray;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: white;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: pink;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: violet;
+	animation-delay: -5s;
+}
+
+.container1 {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+svg {
+    display: block;
+    font: 10rem 'Secular';
+    width: 960px;
+    height: 300px;
+    margin: auto ;
+}
+
+.text-copy1 {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy1:nth-child(1){
+	stroke: turquoise;
+	animation-delay: -1;
+}
+
+.text-copy1:nth-child(2){
+	stroke: gray;
+	animation-delay: -2s;
+}
+
+.text-copy1:nth-child(3){
+	stroke: white;
+	animation-delay: -3s;
+}
+
+.text-copy1:nth-child(4){
+	stroke: pink;
+	animation-delay: -4s;
+}
+
+.text-copy1:nth-child(5){
+	stroke: violet;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+.glow-on-hover {
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.button{
+    text-align: center;
+}
+
+.btn-text{
+    padding: 1.6rem 1rem;
+    font-size: 2rem;
+    position: relative;
+    font-family: Koulen;
+}
+
+.btn-text:hover{
+    top: -1.1rem;
+    padding: 0.5rem;
+    font-size: 3rem;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+body{
+    background: url(../Images/Background5.jpg);
+    height: 97.7vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
